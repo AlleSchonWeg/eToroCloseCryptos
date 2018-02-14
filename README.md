@@ -24,18 +24,34 @@ To start working with the script, there are some points to notice:
 Now we are ready.
 
 - First open the manual trades page: https://www.etoro.com/portfolio/manual-trades. Press F5 and the button appear.
-![Button](.github/img/button.png "Button")
+
+<p align="center">
+  <img alt="Button" src="https://raw.githubusercontent.com/AlleSchonWeg/eToroCloseCryptos/master/img/Button.PNG">
+</p>
+
 - Next Click the button and the website asks you, if you want demo mode or real mode.
-![Confirm](img/confirm.png "Confirm")
+
+<p align="center">
+  <img alt="Confirm" src="https://raw.githubusercontent.com/AlleSchonWeg/eToroCloseCryptos/master/img/Confirm.PNG">
+</p>
+
 If you click ok or cancel nothing started at this point. 
 - Now the additional controls are visible on the page. A message shows you, if you running demo or real mode.
-![Tradeslist](img/tradeslist.png "Tradeslist")
+
+<p align="center">
+  <img alt="Tradeslist" src="https://raw.githubusercontent.com/AlleSchonWeg/eToroCloseCryptos/master/img/TradesList.PNG">
+</p>
+
 - At the screenshot above you see that only crypto rows have new controls. One textbox in green for tp and one in red for sl. On first init the textboxes are filled with there default values. On the left side a checkbox.
 - Next you can fill the checkboxes with your tp and sl values. On buy positions close trade is raised if `current >=  tp` or `current <= sl`. On sell positions close trade is raised if `current <= tp` or `current >= sl`.
 - At this point you are ready. The monitoring begins, if the checkbox has checked state. Price changes are only monitored on rows which are selected. Your values are stored in the local storage of the web page. This means, if you leave the page and come back later the values are not the default ones. Per default all checkboxed are unchecked if you revisit the manuel trades page. This make sure that no closing action is performed.
 
 The script logs every activity and error to the console. Press F12 in chrome to open the developer tool, if you interested in whats going on.
-![devtool](img/devtool.png "devtool")
+
+<p align="center">
+  <img alt="devtool" src="https://raw.githubusercontent.com/AlleSchonWeg/eToroCloseCryptos/master/img/devtool.PNG">
+</p>
+
 
    [etoro]: <https://www.etoro.com/>
    [tm]: <https://tampermonkey.net/>
