@@ -24,7 +24,7 @@ To start working with the script, there are some points to notice:
 Now we are ready.
 
 - First open the manual trades page: https://www.etoro.com/portfolio/manual-trades. Press F5 and the button appear.
-![Button](img/button.png "Button")
+![Button](.github/img/button.png "Button")
 - Next Click the button and the website asks you, if you want demo mode or real mode.
 ![Confirm](img/confirm.png "Confirm")
 If you click ok or cancel nothing started at this point. 
