@@ -25,22 +25,16 @@ Now we are ready.
 
 - First open the manual trades page: https://www.etoro.com/portfolio/manual-trades. Press F5 and the button appear.
 
-<p align="center">
-  <img alt="Button" src="https://raw.githubusercontent.com/AlleSchonWeg/eToroCloseCryptos/master/img/Button.PNG">
-</p>
+![Button.PNG](img/Button.PNG)
 
 - Next Click the button and the website asks you, if you want demo mode or real mode.
 
-<p align="center">
-  <img alt="Confirm" src="https://raw.githubusercontent.com/AlleSchonWeg/eToroCloseCryptos/master/img/Confirm.PNG">
-</p>
+![Confirm.PNG](img/Confirm.PNG)
 
 If you click ok or cancel nothing started at this point. 
 - Now the additional controls are visible on the page. A message shows you, if you running demo or real mode.
 
-<p align="center">
-  <img alt="Tradeslist" src="https://raw.githubusercontent.com/AlleSchonWeg/eToroCloseCryptos/master/img/TradesList.PNG">
-</p>
+![TradesList.PNG](img/TradesList.PNG)
 
 - At the screenshot above you see that only crypto rows have new controls. One textbox in green for tp and one in red for sl. On first init the textboxes are filled with there default values. On the left side a checkbox.
 - Next you can fill the checkboxes with your tp and sl values. On buy positions close trade is raised if `current >=  tp` or `current <= sl`. On sell positions close trade is raised if `current <= tp` or `current >= sl`.
@@ -48,10 +42,7 @@ If you click ok or cancel nothing started at this point.
 
 The script logs every activity and error to the console. Press F12 in chrome to open the developer tool, if you interested in whats going on.
 
-<p align="center">
-  <img alt="devtool" src="https://raw.githubusercontent.com/AlleSchonWeg/eToroCloseCryptos/master/img/devtool.PNG">
-</p>
-
+![devtool.PNG](img/devtool.PNG)
 
    [etoro]: <https://www.etoro.com/>
    [tm]: <https://tampermonkey.net/>
