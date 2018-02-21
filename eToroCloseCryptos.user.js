@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         eToro Close Cryptos
 // @namespace    Disable eToro Crypto Restrictions
-// @version      1.0
+// @version      1.1
 // @description  Enable SL und TP on Cryptos. Website needs to be open and visible or tab must be active.
 // @author       S99
 // @match        https://www.etoro.com/portfolio/manual-trades
@@ -14,7 +14,7 @@
 //Konstanten
 
 var demo=true;
-var cryptos=["BTC", "XRP", "ETHEREUM", "DASH", "LTC", "ETC", "BCH", "XLM"];
+var cryptos=["BTC", "XRP", "ETHEREUM", "DASH", "LTC", "ETC", "BCH", "XLM", "NEO"];
 
 this.$ = this.jQuery = jQuery.noConflict(true);
 waitForKeyElements("portfolio-list-view",pageLoaded);
