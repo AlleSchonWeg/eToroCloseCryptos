@@ -1,6 +1,6 @@
 # eToro Close Crypto Script
 
-[eToro][etoro] close cryptos is a [TamperMonkey][tm] script to close crypto trades if a provided price is reached. It's only testet with chrome, but should work with firefox too.
+[eToro][etoro] close cryptos is a [TamperMonkey][tm] script to close crypto trades if a specified price is reached. It's only tested with chrome, but should work with firefox too.
 
 I tested this script only with the virtual portfolio, because i'm not a trader and i have no idea what is the best time to open a buy or sell trade. But it should work with the real portfolio.
 
@@ -15,7 +15,7 @@ I tested this script only with the virtual portfolio, because i'm not a trader a
 
 To start working with the script, there are some points to notice:
 - If you start the script you always ask if you want run it in demo mode. In demo mode the trades are not closed. The script only opens the close trade dialog and cancels the closing operation. At the first time i suggest to use the demo mode to see if the script is working as expected.
-- The script only works at the manual trading page: https://www.etoro.com/portfolio/manual-trades and the sl, tp and current columns are needed. Make that sure.
+- The script only works at the manual trading page: https://www.etoro.com/portfolio/manual-trades and the SL (Stop Loss), TP (Take Profit) and CURRENT (Current Price) columns are needed. Make that sure.
 - The website needs focus and active. That means you cannot open the manual-trades site in a tab and working in another tab. The page must visible and not hidden. If you have a second screen you can open the website there and working on the first screen.
 - If the computer go to standby the script isn't working. I think this should be obvious.
 - English userinterface is required.
