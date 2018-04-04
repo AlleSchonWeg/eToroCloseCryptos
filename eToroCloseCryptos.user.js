@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         eToro Close Cryptos
 // @namespace    Disable eToro Crypto Restrictions
-// @version      1.1
+// @version      1.2
 // @description  Enable SL und TP on Cryptos. Website needs to be open and visible or tab must be active.
 // @author       S99
 // @match        https://www.etoro.com/portfolio/manual-trades
@@ -73,7 +73,9 @@ function priceChanged(tradeId, currentPrice){
     }
     else{
         isRunning=true;
+        changeBackground(tradeId, true);
         handlePriceChange(tradeId, currentPrice, box);
+        setTimeout(function() {changeBackground(tradeId, false);}, 800); //Nach x sekunden wieder zurückstellen
     }
 }
 function handlePriceChange(tradeId, currentPrice, box){
@@ -345,9 +347,15 @@ function convertPriceDecimalToString(input){
 function createTxtInputControl(tradeId, value, forSl){
     var type = "tp";
     var color = "green";
+    if(isNaN(value)){
+        value = 99999999;
+    }
     if(forSl){
         type = "sl";
         color = "red";
+        if(isNaN(value)){
+            value = 0.01;
+        }
     }
     var txtBox = $("<input data-type='"+type+"' id='id_"+tradeId+"_"+type+"' data-id='"+tradeId+"' type='number' value="+value+" step='0.01' min='0' required style='border:2px solid "+color+";height:20px' />");
     txtBox.on( "change", function() {
@@ -414,6 +422,16 @@ function getStore(key){
         return JSON.parse(result);
     }
     throw "getStore key === null";
+}
+function changeBackground(tradeId, start){
+    if(start){
+        $("#id_"+tradeId+"_tp").css("background-color", "#339933");
+        $("#id_"+tradeId+"_sl").css("background-color", "#ff5757");
+    }
+    else{
+        $("#id_"+tradeId+"_tp").css("background-color", "");
+        $("#id_"+tradeId+"_sl").css("background-color", "");
+    }
 }
 //--------------------------------------------------
 var hidden, visibilityChange;
