@@ -73,7 +73,9 @@ function priceChanged(tradeId, currentPrice){
     }
     else{
         isRunning=true;
+        changeBackground(tradeId, true);
         handlePriceChange(tradeId, currentPrice, box);
+        setTimeout(function() {changeBackground(tradeId, false);}, 800); //Nach x sekunden wieder zurückstellen
     }
 }
 function handlePriceChange(tradeId, currentPrice, box){
@@ -420,6 +422,16 @@ function getStore(key){
         return JSON.parse(result);
     }
     throw "getStore key === null";
+}
+function changeBackground(tradeId, start){
+    if(start){
+        $("#id_"+tradeId+"_tp").css("background-color", "#339933");
+        $("#id_"+tradeId+"_sl").css("background-color", "#ff5757");
+    }
+    else{
+        $("#id_"+tradeId+"_tp").css("background-color", "");
+        $("#id_"+tradeId+"_sl").css("background-color", "");
+    }
 }
 //--------------------------------------------------
 var hidden, visibilityChange;
