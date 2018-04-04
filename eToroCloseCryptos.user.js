@@ -345,9 +345,15 @@ function convertPriceDecimalToString(input){
 function createTxtInputControl(tradeId, value, forSl){
     var type = "tp";
     var color = "green";
+    if(isNaN(value)){
+        value = 99999999;
+    }
     if(forSl){
         type = "sl";
         color = "red";
+        if(isNaN(value)){
+            value = 0.01;
+        }
     }
     var txtBox = $("<input data-type='"+type+"' id='id_"+tradeId+"_"+type+"' data-id='"+tradeId+"' type='number' value="+value+" step='0.01' min='0' required style='border:2px solid "+color+";height:20px' />");
     txtBox.on( "change", function() {
