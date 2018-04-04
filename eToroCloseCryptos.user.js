@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         eToro Close Cryptos
 // @namespace    Disable eToro Crypto Restrictions
-// @version      1.1
+// @version      1.2
 // @description  Enable SL und TP on Cryptos. Website needs to be open and visible or tab must be active.
 // @author       S99
 // @match        https://www.etoro.com/portfolio/manual-trades
