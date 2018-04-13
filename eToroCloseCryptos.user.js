@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         eToro Close Cryptos
 // @namespace    Disable eToro Crypto Restrictions
-// @version      1.2
+// @version      1.3
 // @description  Enable SL und TP on Cryptos. Website needs to be open and visible or tab must be active.
 // @author       S99
-// @match        https://www.etoro.com/portfolio/manual-trades
+// @match        https://www.etoro.com/*
 // @grant        unsafeWindow
 // @run-at       document-idle
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js
@@ -17,7 +17,7 @@ var demo=true;
 var cryptos=["BTC", "XRP", "ETHEREUM", "DASH", "LTC", "ETC", "BCH", "XLM", "NEO"];
 
 this.$ = this.jQuery = jQuery.noConflict(true);
-waitForKeyElements("portfolio-list-view",pageLoaded);
+waitForKeyElements("ui-table[ui-table-id='portfolioManualTrades']",pageLoaded);
 
 //globale Variablen
 var timeout=null;
@@ -41,6 +41,7 @@ function pageLoaded(jNode) {
     });
     startbtn.css({"width": "250px", "border-width": "2px 2px 2px 2px", "border-style": "solid", "heigth": "70px", "font-size": "100%"});
     $(".table-tab-menu").append(startbtn);
+    scriptStarted=false;
 }
 function displayControls(){
     if(!scriptStarted){ //Verhindert, dass Controlls mehrfach eingeblendet werden, falls mehrfach Button geclickt wird.
