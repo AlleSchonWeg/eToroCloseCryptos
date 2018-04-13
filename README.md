@@ -23,7 +23,7 @@ To start working with the script, there are some points to notice:
 
 Now we are ready.
 
-- First open the manual trades page: https://www.etoro.com/portfolio/manual-trades. Press F5 and the button appear.
+- First open the manual trades page: https://www.etoro.com/portfolio/manual-trades. You should see the Display crypto TP/SL settings button.
 
 ![Button.PNG](img/Button.PNG)
 
