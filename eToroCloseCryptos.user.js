@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         eToro Close Cryptos
 // @namespace    Disable eToro Crypto Restrictions
-// @version      1.3
+// @version      1.4
 // @description  Enable SL und TP on Cryptos. Website needs to be open and visible or tab must be active.
 // @author       S99
 // @match        https://www.etoro.com/*
@@ -14,7 +14,7 @@
 //Konstanten
 
 var demo=true;
-var cryptos=["BTC", "XRP", "ETHEREUM", "DASH", "LTC", "ETC", "BCH", "XLM", "NEO"];
+var cryptos=["BTC", "XRP", "ETHEREUM", "DASH", "LTC", "ETC", "BCH", "XLM", "NEO", "ADA", "MIOTA", "EOS", "TRX", "ZEC", "BNB", "XTZ"];
 
 this.$ = this.jQuery = jQuery.noConflict(true);
 waitForKeyElements("ui-table[ui-table-id='portfolioManualTrades']",pageLoaded);
@@ -130,7 +130,7 @@ function startClose(tradeId){
     timeout(function(){
         try{
             if(!demo){
-                angular.element(selectorBtnCloseTrade).triggerHandler("click");
+                document.querySelector(selectorBtnCloseTrade).click();
                 //closeBtn.click(); //Trade schließen
             }
             else{
@@ -148,7 +148,7 @@ function startClose(tradeId){
             handleException(tradeId, ex);
             return;
         }
-    },0);
+    },100);
 }
 var triggerCleanDialogCounter=0;
 function triggerCleanDialog(tradeId){
